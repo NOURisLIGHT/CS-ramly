@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="STW"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-11-24 07:48:06 PM"/>
+        <attribute name="created" value="U1RXO0RFU0tUT1AtUjE2UzlPNTsyMDIyLTExLTA0OzAzOjI0OjU4IFBNOzI1NzI="/>
+        <attribute name="edited" value="U1RXO0RFU0tUT1AtUjE2UzlPNTsyMDIyLTExLTI0OzA3OjQ4OjA2IFBNOzI7MjY4Ng=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="A" type="Integer" array="True" size="100"/>
+            <declare name="min, i" type="Integer" array="False" size=""/>
+            <output expression="&quot;Please enter an array of 100 element&quot;" newline="True"/>
+            <for variable="i" start="0" end="99" direction="inc" step="1">
+                <input variable="A[i]"/>
+            </for>
+            <assign variable="min" expression="A[0]"/>
+            <for variable="i" start="1" end="99" direction="inc" step="1">
+                <if expression="A[i] &lt; A[i-1]">
+                    <then>
+                        <assign variable="min" expression="A[i]"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+            <output expression="&quot;the minimum number is &quot; &amp; min" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

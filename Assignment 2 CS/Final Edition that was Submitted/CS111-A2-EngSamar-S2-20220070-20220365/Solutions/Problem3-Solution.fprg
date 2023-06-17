@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="STW"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-11-06 08:53:05 PM"/>
+        <attribute name="created" value="U1RXO0RFU0tUT1AtUjE2UzlPNTsyMDIyLTExLTA2OzA4OjM3OjAxIFBNOzI1NzE="/>
+        <attribute name="edited" value="U1RXO0RFU0tUT1AtUjE2UzlPNTsyMDIyLTExLTA2OzA4OjUzOjA1IFBNOzE7MjY4MQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="degree" type="Integer" array="False" size=""/>
+            <declare name="class" type="String" array="False" size=""/>
+            <output expression="&quot;Enter your degree&quot;" newline="True"/>
+            <input variable="degree"/>
+            <if expression="degree &lt;= 100 and &#13;&#10;degree &gt;= 0">
+                <then>
+                    <if expression="degree &gt;= 70">
+                        <then>
+                            <assign variable="class" expression="&quot;A&quot;"/>
+                        </then>
+                        <else>
+                            <if expression="degree &gt;= 50">
+                                <then>
+                                    <assign variable="class" expression="&quot;B&quot;"/>
+                                </then>
+                                <else>
+                                    <if expression="degree &gt;= 40">
+                                        <then>
+                                            <assign variable="class" expression="&quot;D&quot;"/>
+                                        </then>
+                                        <else>
+                                            <assign variable="class" expression="&quot;F&quot;"/>
+                                        </else>
+                                    </if>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                    <output expression="class" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;error; the degree must be in range [0, 100]&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

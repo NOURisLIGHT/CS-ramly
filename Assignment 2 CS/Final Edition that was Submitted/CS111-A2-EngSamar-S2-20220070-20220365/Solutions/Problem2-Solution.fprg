@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="STW"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-11-04 08:05:34 PM"/>
+        <attribute name="created" value="U1RXO0RFU0tUT1AtUjE2UzlPNTsyMDIyLTExLTA0OzA3OjAyOjA0IFBNOzI1NjM="/>
+        <attribute name="edited" value="U1RXO0RFU0tUT1AtUjE2UzlPNTsyMDIyLTExLTA0OzA4OjA1OjM0IFBNOzI7MjY3OQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="h1, h2, h, m1, m2, m, s1, s2, s, t1, t2, t" type="Integer" array="False" size=""/>
+            <output expression="&quot;enter the first time by h/m/s&quot;" newline="True"/>
+            <input variable="h1"/>
+            <input variable="m1"/>
+            <input variable="s1"/>
+            <output expression="&quot;enter the second time by h/m/s&quot;" newline="True"/>
+            <input variable="h2"/>
+            <input variable="m2"/>
+            <input variable="s2"/>
+            <assign variable="t1" expression="h1*3600 + m1*60 + s1"/>
+            <assign variable="t2" expression="h2*3600 + m2*60 + s2"/>
+            <assign variable="t" expression="t1-t2"/>
+            <assign variable="h" expression="t/3600"/>
+            <assign variable="m" expression="(t-h*3600)/60"/>
+            <assign variable="s" expression="t-h*3600-m*60"/>
+            <output expression="&quot;the diff. bettween the two times is &quot;" newline="False"/>
+            <output expression="h&amp;&quot;/&quot;&amp;m&amp;&quot;/&quot;&amp;s" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

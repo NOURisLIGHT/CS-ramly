@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="MH"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-11-12 02:20:51 PM"/>
+        <attribute name="created" value="TUg7TUgtUEM7MjAyMi0xMS0xMjswMjoxMjo0MyBQTTsxNzU3"/>
+        <attribute name="edited" value="TUg7TUgtUEM7MjAyMi0xMS0xMjswMjoyMDo1MSBQTTsxOzE4NjM="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="m, p, n, i" type="Integer" array="False" size=""/>
+            <input variable="n"/>
+            <declare name="A" type="Integer" array="True" size="n"/>
+            <input variable="p"/>
+            <for variable="i" start="0" end="n-1" direction="inc" step="1">
+                <input variable="A[i]"/>
+            </for>
+            <for variable="i" start="0" end="n-1" direction="inc" step="1">
+                <if expression="i == p">
+                    <then>
+                        <assign variable="A[p]" expression="0"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+            <for variable="i" start="0" end="n-1" direction="inc" step="1">
+                <output expression="A[i]" newline="False"/>
+                <output expression="&quot; &quot;" newline="False"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

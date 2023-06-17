@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="STW"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-11-24 11:01:07 PM"/>
+        <attribute name="created" value="U1RXO0RFU0tUT1AtUjE2UzlPNTsyMDIyLTExLTI0OzEwOjI3OjI3IFBNOzI1NzE="/>
+        <attribute name="edited" value="U1RXO0RFU0tUT1AtUjE2UzlPNTsyMDIyLTExLTI0OzExOjAxOjA3IFBNOzE7MjY3MA=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="num" type="Integer" array="False" size=""/>
+            <assign variable="num" expression="0"/>
+            <do expression="num &lt; 50">
+                <if expression="num % 2 != 0">
+                    <then>
+                        <output expression="num" newline="False"/>
+                        <output expression="&quot; is odd&quot;" newline="True"/>
+                    </then>
+                    <else/>
+                </if>
+                <assign variable="num" expression="num + 1"/>
+            </do>
+        </body>
+    </function>
+</flowgorithm>

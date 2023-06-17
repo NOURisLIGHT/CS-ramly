@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="MH"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-11-12 01:51:53 PM"/>
+        <attribute name="created" value="TUg7TUgtUEM7MjAyMi0xMS0xMjswMToyNToyNSBQTTsxNzYw"/>
+        <attribute name="edited" value="TUg7TUgtUEM7MjAyMi0xMS0xMjswMTo1MTo1MyBQTTsxOzE4Njg="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="i, size, j" type="Integer" array="False" size=""/>
+            <input variable="size"/>
+            <declare name="reverse" type="String" array="True" size="size"/>
+            <declare name="out" type="String" array="True" size="size"/>
+            <for variable="i" start="0" end="size-1" direction="inc" step="1">
+                <input variable="reverse[i]"/>
+            </for>
+            <for variable="i" start="size-1" end="0" direction="dec" step="1">
+                <for variable="j" start="0" end="size-1" direction="inc" step="1">
+                    <assign variable="out[j]" expression="reverse[i]"/>
+                    <breakpoint/>
+                </for>
+            </for>
+            <for variable="j" start="0" end="size-1" direction="inc" step="1">
+                <output expression="out[j]" newline="False"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

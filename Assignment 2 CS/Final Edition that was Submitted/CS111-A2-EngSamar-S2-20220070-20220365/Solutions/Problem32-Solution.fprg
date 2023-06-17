@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="MH"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-11-30 04:58:45 PM"/>
+        <attribute name="created" value="TUg7TUgtUEM7MjAyMi0xMS0yNjswNTo0NTo0MyBQTTsxNzcx"/>
+        <attribute name="edited" value="TUg7TUgtUEM7MjAyMi0xMS0yNjswNjowNDoyMiBQTTsxOzE4NzI="/>
+        <attribute name="edited" value="U1RXO0RFU0tUT1AtUjE2UzlPNTsyMDIyLTExLTMwOzA0OjU4OjQ1IFBNOzE7MjY4Mw=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="i, s, length" type="Integer" array="False" size=""/>
+            <declare name="word, result, l" type="String" array="False" size=""/>
+            <input variable="word"/>
+            <declare name="A" type="String" array="True" size="len(word)"/>
+            <for variable="i" start="0" end="len(word)- 1" direction="inc" step="1">
+                <assign variable="A[i]" expression="char(word,i)"/>
+            </for>
+            <for variable="i" start="0" end="len(word) - 1" direction="inc" step="1">
+                <assign variable="s" expression="ToCode(A[i])"/>
+                <if expression="s &gt; 96">
+                    <then>
+                        <assign variable="s" expression="s - 32"/>
+                        <assign variable="l" expression="ToChar(s)"/>
+                        <assign variable="A[i]" expression="l"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+            <for variable="i" start="0" end="len(word) - 1" direction="inc" step="1">
+                <output expression="A[i]" newline="False"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

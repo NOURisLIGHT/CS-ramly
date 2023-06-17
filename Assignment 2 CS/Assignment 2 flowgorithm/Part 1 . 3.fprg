@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="MH"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-11-07 08:31:34 PM"/>
+        <attribute name="created" value="TUg7TUgtUEM7MjAyMi0xMS0wNzswODoxNToxNyBQTTsxNzcx"/>
+        <attribute name="edited" value="TUg7TUgtUEM7MjAyMi0xMS0wNzswODozMTozNCBQTTsxOzE4NzY="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="grade, i" type="Integer" array="False" size=""/>
+            <input variable="grade"/>
+            <if expression="grade &gt;= 70">
+                <then>
+                    <output expression="&quot;A&quot;" newline="True"/>
+                </then>
+                <else>
+                    <if expression="grade &gt;= 50 and grade &lt;= 69">
+                        <then>
+                            <output expression="&quot;B&quot;" newline="True"/>
+                        </then>
+                        <else>
+                            <if expression="grade &gt;= 40 and grade &lt;= 49">
+                                <then>
+                                    <output expression="&quot;D&quot;" newline="True"/>
+                                </then>
+                                <else>
+                                    <output expression="&quot;F&quot;" newline="True"/>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="MH"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-11-26 06:04:22 PM"/>
+        <attribute name="created" value="TUg7TUgtUEM7MjAyMi0xMS0yNjswNTo0NTo0MyBQTTsxNzcx"/>
+        <attribute name="edited" value="TUg7TUgtUEM7MjAyMi0xMS0yNjswNjowNDoyMiBQTTsxOzE4NzI="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="i, s, length" type="Integer" array="False" size=""/>
+            <input variable="length"/>
+            <declare name="word" type="String" array="True" size="length"/>
+            <declare name="result, l" type="String" array="False" size=""/>
+            <assign variable="result" expression="&quot;&quot;"/>
+            <for variable="i" start="0" end="size(word)- 1" direction="inc" step="1">
+                <input variable="word[i]"/>
+            </for>
+            <for variable="i" start="0" end="size(word) - 1" direction="inc" step="1">
+                <assign variable="s" expression="ToCode(word[i])"/>
+                <assign variable="s" expression="s - 32"/>
+                <assign variable="l" expression="ToChar(s)"/>
+                <assign variable="result" expression="result &amp; l"/>
+            </for>
+            <output expression="result" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

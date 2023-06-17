@@ -1,0 +1,3 @@
+Ali 5
+Sami 10
+Amir 12
